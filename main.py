@@ -36,7 +36,7 @@ if st.button("Predict"):
 
         prediction = model.predict(input_features)
 
-        st.success(f"Predicted weight: {float(prediction[0]):.2f} kg")
+        st.success(f"Predicted weight: {prediction[0].item():.2f} kg")
 
     except Exception as e:
         st.error("Prediction failed.")
